@@ -1,5 +1,5 @@
 ---
-title: 브라우저 성능 최적화 (1) TTFB
+title: 웹사이트 성능 최적화 (1) TTFB
 date: 2024-01-14 15:00:00 +0900
 categories: [Web, Optimization]
 tags: [cs, web, optimization] # TAG names should always be lowercase
