@@ -7,7 +7,7 @@ tags: [cs, web, optimization] # TAG names should always be lowercase
 
 앞선 [포스팅](https://ppsea.github.io/posts/rendering/)에서 렌더링과정 최적화에 대해 알아보았고 렌더링을 차단하는 리소스의 일부(CSS - 렌더링 차단, Javasript - 파서 차단)를 알아보았습니다. 이번에는 Critical Rendering을 최적화하는 몇가지 기법을 더 알아보겠습니다.
 
-### Preload Scanner 사용
+## Preload Scanner 사용
 
 Preload Scanner는 HTML 파서가 리소스를 발견하기 전에 원시 HTML 응답을 스캔하여 리소스를 찾아 추측하는 방식으로 가져오는 보조 HTML 파서 형태의 브라우저 최적화 기술입니다. 예를 들어 HTML 파싱이 차단된 상태여도 img 태그에 지정된 리소스 다운로드를 할 수 있습니다.
 
@@ -17,7 +17,7 @@ Preload Scanner는 HTML 파서가 리소스를 발견하기 전에 원시 HTML �
 - JavaScript 또는 dynamic import를 사용하여 로드된 모듈을 사용하여 DOM에 삽입된 `<script>` 요소
 - Javascript를 사용하여 클라이언트에서 렌더링된 HTML입니다. 이러한 마크업은 Javascript 리소스의 문자열 내에 포함되며 Preload Scanner에서 검색할 수 없습니다.
 
-### CSS 로드 최적화 기법들
+## CSS 로드 최적화 기법들
 
 1. 축소하기
    - CSS를 축소하여 파일 크기를 줄여 더 빠르게 다운로드할 수 있습니다.
@@ -29,7 +29,7 @@ Preload Scanner는 HTML 파서가 리소스를 발견하기 전에 원시 HTML �
 4. 인라인 CSS
    - 초기 표시 영역내에 표시되는 콘텐츠를 렌더링하는데 필요한 스타일을 `<head/>` 에 삽입하면 CSS리소스에 대한 네트워크 요청이 사라지며, 올바르게 처리된 경우 브라우저 캐시가 준비되지 않았을 때 초기 로드 시간이 개선될 수 있습니다. 나머지 CSS는 비동기 로드하거나 `<body>`의 끝에 추가할 수 있습니다.
 
-### Javascript 로드 최적화 기법들
+## Javascript 로드 최적화 기법들
 
 1. async와 defer 속성을 사용하기
    - `defer` 또는 `async` 속성 없이 `<script>` 요소를 로드하면 스크립트가 다운로드, 파싱, 실행될 때까지 브라우저에서 파싱과 렌더링이 차단됩니다.

@@ -5,7 +5,7 @@ categories: [Web, Optimization]
 tags: [cs, web, optimization] # TAG names should always be lowercase
 ---
 
-### 성능 최적화가 중요한 이유
+## 성능 최적화가 중요한 이유
 
 웹사이트 방문자는 머무를지 떠날지를 결정하기 전에 웹페이지에서 평균 15초를 보낸다고 합니다.
 
@@ -15,7 +15,7 @@ tags: [cs, web, optimization] # TAG names should always be lowercase
 
 그러므로 웹 개발자는 성능 개선을 위해 서비스 환경에 맞는 최적화 방법들을 적용해야 합니다.
 
-### 요청 후 첫번째 바이트(TTFB)까지
+## 요청 후 첫번째 바이트(TTFB)까지
 
 앞선 [포스팅](https://ppsea.github.io/posts/browser-structure/)에서 웹사이트에 접속하면 웹 서버는 웹사이트 렌더링에 필요한 여러 데이터를 응답한다고 했습니다. 요청 후 최초로 바이트가 도달할 때까지를 TTFB라 합니다.
 
